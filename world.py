@@ -39,9 +39,16 @@ class World:
                 for a in self.animals:
                     if a.x == x and a.y == y:
                         if a.species == "zebra":
-                            symbol = "0"
+                            symbol = a.symbol
                         elif a.species == "lion":
-                            symbol = "X"
+                            symbol = a.symbol
                         break
                 row += symbol
             print(row)
+            
+    def update(self):
+        for a in self.animals:
+            a.move(self.width, self.height)
+        
+        for a in list(self.animals): 
+            a.act(self.animals, self.width, self.height) 
