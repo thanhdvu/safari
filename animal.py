@@ -58,7 +58,7 @@ class Lion(Animal):
         prey = None
         for a in others: 
             if a.species =="zebra":
-                if abs(self.x - a.x) + abs(self.y - a.y) ==1: 
+                if max(abs(self.x - a.x), abs(self.y - a.y)) == 1: 
                     prey = a
                     break 
         
