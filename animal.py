@@ -85,7 +85,7 @@ class Lion(Animal):
                 if 0 <= nx < width and 0 <= ny < height:
                     #번식 
                     if (nx, ny) not in occupied:
-                        others.append(Zebra(nx, ny))
+                        others.append(Lion(nx, ny))
                         self.age = 0
                         break
 
