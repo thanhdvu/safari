@@ -30,7 +30,7 @@ class Zebra(Animal):
     def act(self, others:list, width: int, height: int): 
         self.age += 1
 
-        if self.age >= 3: 
+        if self.age >= 4: 
             directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
             random.shuffle(directions) 
 
@@ -67,12 +67,7 @@ class Lion(Animal):
             others.remove(prey)
             self.hungry_years = -1 
             
-        if self.hungry_years >=5 : 
-            others.remove(self)
-            return 
-
-        #5년 굶으면 사망 
-        if self.hungry_years >= 5:
+        if self.hungry_years > 5: 
             others.remove(self)
             return 
         
