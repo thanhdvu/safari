@@ -43,8 +43,9 @@ class World:
                         elif a.species == "lion":
                             symbol = a.symbol
                         break
-                row += symbol
+                row += symbol + " "
             print(row)
+
             
     def update(self):
         for a in self.animals:
