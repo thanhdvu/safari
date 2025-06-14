@@ -39,7 +39,6 @@ class Zebra(Animal):
                 nx = self.x + dx
                 ny = self.y + dy
                 if 0 <= nx < width and 0 <= ny < height:
-                    #번식 
                     if (nx, ny) not in occupied:
                         others.append(Zebra(nx, ny))
                         self.age = 0
@@ -71,8 +70,7 @@ class Lion(Animal):
             others.remove(self)
             return 
         
-        #번식 (5살 이상) )
-        if self.age >= 5: 
+        if self.age > 5: 
             directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
             random.shuffle(directions) 
             occupied = {(a.x, a.y) for a in others}
